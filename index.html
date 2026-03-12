@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reiga Sari Travel | Premium Lovina Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">REIGA SARI TRAVEL</div>
+        <div class="nav-links">
+            <a href="#packages" class="lang-text" data-en="Packages" data-id="Paket">Packages</a>
+            <a href="#gallery" class="lang-text" data-en="Gallery" data-id="Galeri">Gallery</a>
+            <a href="#reviews" class="lang-text" data-en="Reviews" data-id="Ulasan">Reviews</a>
+            <a href="https://instagram.com/reigasaritravel" target="_blank"><i class="fab fa-instagram"></i></a>
+            <button id="lang-toggle" class="btn-lang">EN | ID</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="lang-text" data-en="Explore Lovina's Wonders" data-id="Jelajahi Keajaiban Lovina">Explore Lovina's Wonders</h1>
+            <p class="lang-text" data-en="Rated 5.0 on Google. Best Diving, Snorkeling, and Land Adventures." data-id="Rating 5.0 di Google. Petualangan Diving, Snorkeling, dan Darat Terbaik.">Rated 5.0 on Google. Best Diving, Snorkeling, and Land Adventures.</p>
+            <a href="#booking" class="btn-gold lang-text" data-en="Book Your Journey" data-id="Pesan Perjalananmu">Book Your Journey</a>
+        </div>
+    </header>
+
+    <section id="packages" class="section">
+        <h2 class="section-title lang-text" data-en="Exclusive Packages" data-id="Paket Eksklusif">Exclusive Packages</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Snorkeling</h3>
+                <p class="price">IDR 500k</p>
+                <p class="lang-text" data-en="Discover vibrant coral reefs." data-id="Temukan terumbu karang yang hidup.">Discover vibrant coral reefs.</p>
+            </div>
+            <div class="card">
+                <h3>Diving</h3>
+                <p class="price">IDR 800k</p>
+                <p class="lang-text" data-en="Swim with sea turtles and explore the deep." data-id="Berenang bersama kura-kura dan jelajahi laut dalam.">Swim with sea turtles and explore the deep.</p>
+            </div>
+            <div class="card">
+                <h3>Batur Volcano</h3>
+                <p class="price">IDR 900k</p>
+                <p class="lang-text" data-en="Epic sunrise jeep adventure." data-id="Petualangan jeep sunrise epik.">Epic sunrise jeep adventure.</p>
+            </div>
+            <div class="card">
+                <h3>Ijen Tour</h3>
+                <p class="price">IDR 1.2M</p>
+                <p class="lang-text" data-en="Witness the majestic blue fire crater." data-id="Saksikan kawah api biru yang megah.">Witness the majestic blue fire crater.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section bg-darker">
+        <h2 class="section-title lang-text" data-en="Our Memories" data-id="Kenangan Kami">Our Memories</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="diving">Diving & Snorkeling</button>
+            <button class="filter-btn" data-filter="land">Land Tours</button>
+        </div>
+        <div class="gallery-grid" id="gallery-grid">
+            </div>
+    </section>
+
+    <section id="booking" class="section">
+        <h2 class="section-title lang-text" data-en="Reserve Your Spot" data-id="Pesan Tempat Anda">Reserve Your Spot</h2>
+        <form id="booking-form" class="booking-form">
+            <input type="text" id="b-name" placeholder="Full Name / Nama Lengkap" required>
+            <input type="date" id="b-date" required>
+            <select id="b-package" required>
+                <option value="Snorkeling">Snorkeling (500k)</option>
+                <option value="Diving">Diving (800k)</option>
+                <option value="Batur Volcano">Batur Volcano (900k)</option>
+                <option value="Ijen Tour">Ijen Tour (1.2M)</option>
+            </select>
+            <input type="number" id="b-persons" placeholder="Number of Persons / Jumlah Orang" min="1" required>
+            <button type="button" class="btn-gold" onclick="sendWhatsApp()">
+                <i class="fab fa-whatsapp"></i> <span class="lang-text" data-en="Book via WhatsApp" data-id="Pesan via WhatsApp">Book via WhatsApp</span>
+            </button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Reiga Sari Travel. Follow us on <a href="https://instagram.com/reigasaritravel" target="_blank" style="color:var(--gold);">@reigasaritravel</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
