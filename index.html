@@ -1,0 +1,2549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reiga Sari Travel Lovina – Bali's Premier Tour Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* ============================================================
+       REIGA SARI TRAVEL LOVINA — Premium CSS
+       ============================================================ */
+
+    /* ── 1. CSS Variables ─────────────────────────────────── */
+    :root {
+      --midnight: #0F172A;
+      --deep-dark: #0B1120;
+      --navy-mid: #111827;
+      --navy-light: #1E293B;
+      --gold: #D4AF37;
+      --gold-light: #E8C84A;
+      --gold-dim: rgba(212, 175, 55, 0.15);
+      --gold-dim2: rgba(212, 175, 55, 0.08);
+      --white: #FFFFFF;
+      --text-primary: #F1F5F9;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --glass-bg: rgba(255, 255, 255, 0.04);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --glass-hover: rgba(255, 255, 255, 0.07);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --shadow-gold: 0 0 40px rgba(212, 175, 55, 0.25), 0 0 80px rgba(212, 175, 55, 0.1);
+      --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+      --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      --nav-h: 72px;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+    }
+
+    /* ── 2. Reset & Base ──────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--deep-dark);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button { border: none; cursor: pointer; background: transparent; font-family: inherit; }
+    input, select, textarea { font-family: inherit; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--deep-dark); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+
+    /* Selection */
+    ::selection { background: rgba(212, 175, 55, 0.3); color: var(--white); }
+
+    /* ── 3. Typography ────────────────────────────────────── */
+    .section-eyebrow {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 2rem;
+    }
+    .section-eyebrow::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 1.5rem;
+      height: 1px;
+      background: var(--gold);
+      transform: translateY(-50%);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    .section-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+      line-height: 1.8;
+    }
+
+    .section-header {
+      margin-bottom: 4rem;
+    }
+
+    .section-header.centered {
+      text-align: center;
+    }
+    .section-header.centered .section-eyebrow {
+      padding-left: 0;
+      padding: 0 1rem;
+    }
+    .section-header.centered .section-eyebrow::before {
+      display: none;
+    }
+    .section-header.centered .section-desc {
+      margin: 0 auto;
+    }
+
+    /* ── 4. Layout Helpers ────────────────────────────────── */
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ── 5. Buttons ───────────────────────────────────────── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--gold);
+      color: var(--deep-dark);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      padding: 0.9rem 2.2rem;
+      border-radius: 100px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .btn-primary:hover { transform: translateY(-2px) scale(1.02); background: var(--gold-light); }
+    .btn-primary:hover::before { opacity: 1; }
+
+    .glow-btn {
+      box-shadow: 0 4px 24px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.15);
+    }
+    .glow-btn:hover {
+      box-shadow: 0 8px 40px rgba(212, 175, 55, 0.6), 0 0 80px rgba(212, 175, 55, 0.25);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 0.9rem 1.6rem;
+      border: 1px solid var(--glass-border);
+      border-radius: 100px;
+      transition: var(--transition);
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.04);
+    }
+    .btn-ghost:hover {
+      border-color: rgba(212, 175, 55, 0.4);
+      color: var(--gold);
+      background: var(--gold-dim2);
+    }
+
+    .full-width { width: 100%; justify-content: center; border-radius: var(--radius-md); padding: 1.1rem; font-size: 1rem; }
+
+    /* ── 6. Glass Card ────────────────────────────────────── */
+    .glass-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: var(--radius-lg);
+    }
+
+    /* ── 7. Navbar ────────────────────────────────────────── */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--nav-h);
+      transition: var(--transition);
+    }
+    .navbar.scrolled {
+      background: rgba(11, 17, 32, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .logo-main {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.01em;
+    }
+    .logo-sub {
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      flex: 1;
+      justify-content: center;
+    }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 0.3s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-book-btn {
+      background: var(--gold) !important;
+      color: var(--deep-dark) !important;
+      font-weight: 700 !important;
+      padding: 0.5rem 1.4rem;
+      border-radius: 100px;
+      transition: var(--transition) !important;
+    }
+    .nav-book-btn:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+    .nav-book-btn::after { display: none !important; }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      padding: 0.35rem 0.8rem;
+      border: 1px solid var(--glass-border);
+      border-radius: 100px;
+      transition: var(--transition);
+      letter-spacing: 0.05em;
+    }
+    .lang-toggle:hover { border-color: var(--gold); color: var(--gold); }
+    .lang-toggle .lang-en.active, .lang-toggle .lang-id.active { color: var(--gold); }
+    .lang-divider { opacity: 0.3; }
+
+    .ig-link {
+      color: var(--text-secondary);
+      transition: color 0.3s;
+      display: flex;
+    }
+    .ig-link:hover { color: var(--gold); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── 8. Hero ──────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-parallax {
+      position: absolute;
+      inset: -10%;
+      background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1600&q=85');
+      background-size: cover;
+      background-position: center;
+      will-change: transform;
+      transition: transform 0.1s linear;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: 
+        linear-gradient(180deg, rgba(11,17,32,0.3) 0%, rgba(11,17,32,0.6) 50%, rgba(11,17,32,0.95) 100%),
+        linear-gradient(90deg, rgba(11,17,32,0.6) 0%, transparent 60%);
+    }
+
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 50%;
+      opacity: 0;
+      animation: floatParticle linear infinite;
+    }
+
+    @keyframes floatParticle {
+      0%   { opacity: 0; transform: translateY(0) scale(1); }
+      10%  { opacity: 0.6; }
+      90%  { opacity: 0.3; }
+      100% { opacity: 0; transform: translateY(-120vh) scale(0.3); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 0 1.5rem;
+      text-align: left;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      padding: 0.45rem 1.1rem;
+      border-radius: 100px;
+      margin-bottom: 1.75rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1em;
+    }
+
+    .title-line {
+      display: block;
+      color: var(--white);
+      text-shadow: 0 2px 40px rgba(0,0,0,0.5);
+    }
+    .title-line.italic {
+      font-style: italic;
+      color: var(--gold);
+      text-shadow: var(--shadow-gold);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+      color: rgba(241, 245, 249, 0.8);
+      max-width: 580px;
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .stat { text-align: left; }
+    .stat-num {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .stat-label {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+    .stat-divider {
+      width: 1px;
+      height: 40px;
+      background: var(--glass-border);
+    }
+
+    .hero-scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.1); }
+    }
+
+    /* ── 9. Animations ────────────────────────────────────── */
+    .animate-fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .delay-4 { animation-delay: 0.8s; }
+    .delay-5 { animation-delay: 1s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ── 10. Why Us ───────────────────────────────────────── */
+    .why-us {
+      padding: 8rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .why-us::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.06), transparent 70%);
+      pointer-events: none;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .why-card {
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .why-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212, 175, 55, 0.2);
+    }
+    .why-card:hover .card-glow {
+      opacity: 1;
+    }
+
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      background: var(--gold-dim);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.75rem;
+    }
+    .card-icon svg { width: 26px; height: 26px; color: var(--gold); stroke: var(--gold); }
+
+    .why-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.85rem;
+      line-height: 1.3;
+    }
+    .why-card p {
+      font-size: 0.925rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .featured-card {
+      border-color: rgba(212, 175, 55, 0.25);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.07), rgba(255,255,255,0.03));
+    }
+    .featured-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--deep-dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .stars-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      font-size: 0.875rem;
+    }
+    .stars-row span:first-child { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+    .stars-row span:last-child { color: var(--text-muted); }
+
+    .card-glow {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    /* ── 11. Packages ─────────────────────────────────────── */
+    .packages {
+      padding: 8rem 0;
+      background: linear-gradient(180deg, var(--deep-dark) 0%, var(--midnight) 50%, var(--deep-dark) 100%);
+      position: relative;
+    }
+    .packages::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .pkg-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--navy-mid);
+      border: 1px solid var(--glass-border);
+      transition: var(--transition);
+      position: relative;
+      cursor: pointer;
+    }
+    .pkg-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      border-color: rgba(212, 175, 55, 0.25);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 40px rgba(212, 175, 55, 0.08);
+    }
+    .pkg-card:hover .pkg-img-wrap img { transform: scale(1.08); }
+    .pkg-card:hover .pkg-shine { opacity: 1; }
+
+    .pkg-img-wrap {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+    .pkg-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .pkg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(11,17,32,0.9) 0%, rgba(11,17,32,0.2) 60%, transparent 100%);
+    }
+
+    .pkg-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--gold);
+      color: var(--deep-dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      letter-spacing: 0.05em;
+      z-index: 1;
+    }
+    .premium-badge {
+      background: linear-gradient(135deg, #D4AF37, #F5D278, #D4AF37);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    }
+
+    .pkg-body {
+      padding: 1.75rem;
+    }
+    .pkg-category {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .pkg-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .pkg-body p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .pkg-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+    }
+    .pkg-includes li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.83rem;
+      color: var(--text-secondary);
+    }
+
+    .pkg-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--glass-border);
+    }
+    .pkg-price {
+      display: flex;
+      flex-direction: column;
+    }
+    .price-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .price-amount {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .pkg-book-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      color: var(--text-primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.65rem 1.4rem;
+      border-radius: 100px;
+      transition: var(--transition);
+    }
+    .pkg-book-btn:hover, .gold-btn {
+      background: var(--gold);
+      color: var(--deep-dark);
+      border-color: var(--gold);
+      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+    }
+
+    .premium-pkg {
+      border-color: rgba(212, 175, 55, 0.2);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.04), var(--navy-mid));
+    }
+
+    .pkg-shine {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+      transform: skewX(-15deg);
+      transition: left 0.6s;
+      pointer-events: none;
+      opacity: 0;
+    }
+    .pkg-card:hover .pkg-shine { left: 140%; opacity: 1; }
+
+    /* ── 12. Gallery ──────────────────────────────────────── */
+    .gallery-section {
+      padding: 8rem 0;
+    }
+
+    .gallery-filters {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .filter-btn {
+      padding: 0.55rem 1.4rem;
+      border-radius: 100px;
+      border: 1px solid var(--glass-border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: var(--transition);
+      font-family: var(--font-body);
+    }
+    .filter-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--glass-hover);
+    }
+    .filter-btn.active {
+      background: var(--gold);
+      color: var(--deep-dark);
+      font-weight: 700;
+      border-color: var(--gold);
+    }
+
+    .gallery-grid {
+      columns: 4;
+      column-gap: 1rem;
+    }
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: var(--transition);
+    }
+    .gallery-item.hidden {
+      display: none;
+    }
+    .gallery-item.fade-out {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    .gallery-item.fade-in {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+
+    .gallery-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(11,17,32,0.85) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.35s;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+    }
+    .gallery-item:hover .gallery-item-overlay { opacity: 1; }
+
+    .gallery-item-overlay span {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* ── 13. Testimonials ─────────────────────────────────── */
+    .testimonials {
+      padding: 8rem 0;
+      background: linear-gradient(180deg, var(--deep-dark) 0%, var(--midnight) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials::before {
+      content: '"';
+      position: absolute;
+      font-family: var(--font-display);
+      font-size: 30rem;
+      color: rgba(212, 175, 55, 0.025);
+      top: -8rem;
+      left: -2rem;
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .testi-track-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testi-track {
+      display: flex;
+      gap: 1.5rem;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .testi-card {
+      flex: 0 0 calc(33.333% - 1rem);
+      padding: 2.25rem;
+      transition: var(--transition);
+    }
+    .testi-card:hover {
+      border-color: rgba(212, 175, 55, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .testi-stars {
+      color: var(--gold);
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      margin-bottom: 1.25rem;
+    }
+
+    .testi-quote {
+      font-size: 0.925rem;
+      color: var(--text-secondary);
+      line-height: 1.9;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      flex: 1;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .testi-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .testi-name {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--white);
+      margin-bottom: 0.15rem;
+    }
+    .testi-origin {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .testi-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .testi-prev, .testi-next {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+    .testi-prev:hover, .testi-next:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: var(--gold-dim2);
+    }
+
+    .testi-dots {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .testi-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .testi-dot.active {
+      background: var(--gold);
+      width: 24px;
+      border-radius: 4px;
+    }
+
+    /* ── 14. Booking ──────────────────────────────────────── */
+    .booking {
+      padding: 8rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .booking::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+    }
+    .booking::after {
+      content: '';
+      position: absolute;
+      bottom: 10%;
+      right: -5%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.05), transparent 70%);
+      pointer-events: none;
+    }
+
+    .booking-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .booking-left {
+      position: sticky;
+      top: calc(var(--nav-h) + 2rem);
+    }
+
+    .booking-left .section-title {
+      margin-bottom: 1.25rem;
+    }
+    .booking-left > p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .booking-features {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .bf-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .contact-direct {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .wa-direct {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #25D366;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: opacity 0.3s;
+    }
+    .wa-direct:hover { opacity: 0.8; }
+
+    .form-card {
+      padding: 2.5rem;
+    }
+
+    /* ── Floating Labels ── */
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .form-group {
+      position: relative;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.03);
+      border: none;
+      border-radius: 0;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      padding: 1.4rem 0 0.6rem;
+      outline: none;
+      transition: var(--transition);
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .form-group textarea {
+      resize: none;
+      min-height: 90px;
+    }
+
+    .form-group label {
+      position: absolute;
+      left: 0;
+      top: 1.1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+      pointer-events: none;
+    }
+
+    .form-group input:focus ~ label,
+    .form-group input:not(:placeholder-shown) ~ label,
+    .form-group textarea:focus ~ label,
+    .form-group textarea:not(:placeholder-shown) ~ label,
+    .form-group select:focus ~ label,
+    .form-group select.has-value ~ label {
+      top: 0;
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    .form-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--glass-border);
+    }
+    .form-line::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.4s;
+    }
+    .form-group:focus-within .form-line::after { width: 100%; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .select-group {
+      position: relative;
+    }
+    .select-arrow {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-20%) rotate(0);
+      color: var(--text-muted);
+      pointer-events: none;
+      transition: transform 0.3s;
+    }
+    .form-group select:focus ~ .select-arrow { transform: translateY(-20%) rotate(180deg); color: var(--gold); }
+
+    /* Date input styling */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.5);
+      cursor: pointer;
+    }
+
+    /* ── 15. Footer ───────────────────────────────────────── */
+    .footer {
+      background: var(--deep-dark);
+      border-top: 1px solid var(--glass-border);
+      position: relative;
+      overflow: hidden;
+      padding-top: 5rem;
+    }
+
+    .footer-glow {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.5;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1.5fr;
+      gap: 4rem;
+    }
+
+    .footer-brand .nav-logo {
+      margin-bottom: 1.25rem;
+    }
+    .footer-brand p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 300px;
+      margin-bottom: 1.75rem;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .footer-socials a {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+    .footer-socials a:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: var(--gold-dim2);
+    }
+
+    .footer-links h4,
+    .footer-contact h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .footer-links ul a {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: color 0.3s;
+    }
+    .footer-links ul a:hover { color: var(--gold); }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+    }
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .footer-contact-item a {
+      color: var(--text-muted);
+      transition: color 0.3s;
+    }
+    .footer-contact-item a:hover { color: var(--gold); }
+    .footer-contact-item svg { flex-shrink: 0; margin-top: 2px; }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem;
+      border-top: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ── 16. Floating WhatsApp ────────────────────────────── */
+    .wa-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 24px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      transition: var(--transition);
+    }
+    .wa-float:hover {
+      transform: scale(1.1) translateY(-2px);
+      box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6);
+    }
+
+    .wa-tooltip {
+      position: absolute;
+      right: calc(100% + 0.75rem);
+      background: var(--navy-light);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.4rem 0.9rem;
+      border-radius: 100px;
+      white-space: nowrap;
+      border: 1px solid var(--glass-border);
+      opacity: 0;
+      transform: translateX(10px);
+      transition: var(--transition);
+      pointer-events: none;
+    }
+    .wa-float:hover .wa-tooltip {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Pulse animation */
+    .wa-float::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border: 2px solid rgba(37, 211, 102, 0.4);
+      border-radius: 50%;
+      animation: waPulse 2.5s ease-out infinite;
+    }
+    @keyframes waPulse {
+      0% { transform: scale(1); opacity: 0.7; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+    /* ── 17. Lightbox ─────────────────────────────────────── */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      backdrop-filter: blur(10px);
+    }
+    .lightbox.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .lb-img-wrap {
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+    .lb-img-wrap img {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: var(--radius-md);
+      object-fit: contain;
+    }
+    .lb-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      color: white;
+      font-size: 1.5rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    .lb-close:hover { background: rgba(255,255,255,0.1); }
+
+    .lb-prev, .lb-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 3rem;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: var(--transition);
+      line-height: 1;
+    }
+    .lb-prev { left: 1.5rem; }
+    .lb-next { right: 1.5rem; }
+    .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.1); }
+
+    /* ── 18. Responsive ───────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .featured-card { grid-column: span 2; }
+      .packages-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .footer-brand { grid-column: span 2; }
+      .gallery-grid { columns: 3; }
+      .testi-card { flex: 0 0 calc(50% - 0.75rem); }
+    }
+
+    @media (max-width: 768px) {
+      :root { --nav-h: 64px; }
+
+      .nav-links {
+        position: fixed;
+        top: var(--nav-h);
+        left: 0;
+        right: 0;
+        background: rgba(11, 17, 32, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition);
+        border-bottom: 1px solid var(--glass-border);
+      }
+      .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+      }
+      .nav-links li { width: 100%; border-bottom: 1px solid var(--glass-border); }
+      .nav-links a { display: block; padding: 1rem 0; font-size: 1rem; }
+      .nav-book-btn { margin-top: 0.5rem; text-align: center; }
+
+      .hamburger { display: flex; }
+
+      .hero-title { font-size: clamp(2.5rem, 10vw, 4rem); }
+      .hero-stats { gap: 1.5rem; }
+      .stat-num { font-size: 1.3rem; }
+
+      .why-grid { grid-template-columns: 1fr; }
+      .featured-card { grid-column: span 1; }
+
+      .packages-grid { grid-template-columns: 1fr; }
+      .gallery-grid { columns: 2; }
+
+      .booking-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .booking-left { position: static; }
+
+      .testi-card { flex: 0 0 100%; }
+
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-brand { grid-column: span 1; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+
+      .hero-cta { flex-direction: column; align-items: flex-start; }
+
+      .section-header { margin-bottom: 3rem; }
+
+      .form-row { grid-template-columns: 1fr; gap: 1.75rem; }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid { columns: 1; }
+      .hero-stats { gap: 1rem; }
+      .stat-divider { display: none; }
+      .pkg-footer { flex-direction: column; gap: 1rem; align-items: flex-start; }
+      .pkg-book-btn { width: 100%; justify-content: center; }
+      .testi-card { padding: 1.5rem; }
+
+      .lb-prev { left: 0.5rem; }
+      .lb-next { right: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-main">Reiga Sari</span>
+        <span class="logo-sub">Travel Lovina</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#why-us" data-en="Why Us" data-id="Mengapa Kami">Why Us</a></li>
+        <li><a href="#packages" data-en="Packages" data-id="Paket">Packages</a></li>
+        <li><a href="#gallery" data-en="Gallery" data-id="Galeri">Gallery</a></li>
+        <li><a href="#testimonials" data-en="Reviews" data-id="Ulasan">Reviews</a></li>
+        <li><a href="#booking" class="nav-book-btn" data-en="Book Now" data-id="Pesan Sekarang">Book Now</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-en active">EN</span>
+          <span class="lang-divider">|</span>
+          <span class="lang-id">ID</span>
+        </button>
+        <a href="https://instagram.com/reigasaritravel" target="_blank" class="ig-link" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-parallax" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-up delay-1">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span data-en="Lovina's #1 Rated Tour Agency" data-id="Agen Wisata Terbaik di Lovina">Lovina's #1 Rated Tour Agency</span>
+      </div>
+      <h1 class="hero-title animate-fade-up delay-2">
+        <span class="title-line" data-en="Discover Bali's" data-id="Jelajahi Keajaiban">Discover Bali's</span>
+        <span class="title-line italic" data-en="Hidden Wonders" data-id="Tersembunyi Bali">Hidden Wonders</span>
+      </h1>
+      <p class="hero-subtitle animate-fade-up delay-3" data-en="Exclusive tours crafted by local Balinese experts. Dive with dolphins, trek Batur Volcano, witness the magic of Ijen's blue fire — all with guides who know every secret path." data-id="Paket wisata eksklusif dirancang oleh ahli lokal Bali. Menyelam bersama lumba-lumba, mendaki Gunung Batur, menyaksikan keajaiban api biru Ijen — bersama pemandu yang mengenal setiap jalur rahasia.">
+        Exclusive tours crafted by local Balinese experts. Dive with dolphins, trek Batur Volcano, witness the magic of Ijen's blue fire — all with guides who know every secret path.
+      </p>
+      <div class="hero-cta animate-fade-up delay-4">
+        <a href="#packages" class="btn-primary glow-btn">
+          <span data-en="Explore Packages" data-id="Lihat Paket">Explore Packages</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#booking" class="btn-ghost">
+          <span data-en="Book Direct via WhatsApp" data-id="Pesan via WhatsApp">Book Direct via WhatsApp</span>
+        </a>
+      </div>
+      <div class="hero-stats animate-fade-up delay-5">
+        <div class="stat">
+          <span class="stat-num">500+</span>
+          <span class="stat-label" data-en="Happy Travelers" data-id="Wisatawan Puas">Happy Travelers</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">5.0★</span>
+          <span class="stat-label" data-en="Google Rating" data-id="Rating Google">Google Rating</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">8+</span>
+          <span class="stat-label" data-en="Years Experience" data-id="Tahun Pengalaman">Years Experience</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span data-en="Scroll" data-id="Gulir">Scroll</span>
+    </div>
+  </section>
+
+  <section class="why-us" id="why-us">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-en="Our Promise" data-id="Janji Kami">Our Promise</span>
+        <h2 class="section-title" data-en="Why Travelers Choose <em>Reiga Sari</em>" data-id="Mengapa Wisatawan Memilih <em>Reiga Sari</em>">Why Travelers Choose <em>Reiga Sari</em></h2>
+        <p class="section-desc" data-en="We're not just a tour agency. We're your local Balinese family — dedicated to creating memories that last a lifetime." data-id="Kami bukan sekadar agen wisata. Kami adalah keluarga Bali Anda — berdedikasi menciptakan kenangan yang abadi.">We're not just a tour agency. We're your local Balinese family — dedicated to creating memories that last a lifetime.</p>
+      </div>
+      <div class="why-grid">
+        <div class="glass-card why-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+          </div>
+          <h3 data-en="Born & Bred Local Experts" data-id="Ahli Lokal Sejati">Born & Bred Local Experts</h3>
+          <p data-en="Our guides were born in Lovina and know every hidden beach, sacred temple, and secret sunrise spot. No tourist traps — just authentic Bali." data-id="Pemandu kami lahir di Lovina dan mengenal setiap pantai tersembunyi, pura suci, dan tempat matahari terbit rahasia. Tanpa perangkap turis — hanya Bali yang autentik.">Our guides were born in Lovina and know every hidden beach, sacred temple, and secret sunrise spot. No tourist traps — just authentic Bali.</p>
+          <div class="card-glow"></div>
+        </div>
+        <div class="glass-card why-card featured-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          </div>
+          <div class="featured-badge" data-en="Most Praised" data-id="Paling Dipuji">Most Praised</div>
+          <h3 data-en="Perfect 5.0 Google Rating" data-id="Rating Google Sempurna 5.0">Perfect 5.0 Google Rating</h3>
+          <p data-en="Every single review is 5 stars. We don't just meet expectations — we shatter them. Our guests consistently describe their tours as the highlight of their entire Bali trip." data-id="Setiap ulasan bintang 5. Kami tidak hanya memenuhi ekspektasi — kami melampauinya. Tamu kami konsisten menyebut wisata kami sebagai puncak perjalanan Bali mereka.">Every single review is 5 stars. We don't just meet expectations — we shatter them. Our guests consistently describe their tours as the highlight of their entire Bali trip.</p>
+          <div class="stars-row">
+            <span>★★★★★</span>
+            <span>100+ Reviews</span>
+          </div>
+          <div class="card-glow"></div>
+        </div>
+        <div class="glass-card why-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 data-en="Transparent & Fair Pricing" data-id="Harga Transparan & Jujur">Transparent & Fair Pricing</h3>
+          <p data-en="No hidden fees, no bait-and-switch. What you see is what you pay. We believe incredible experiences shouldn't come with a side of financial stress." data-id="Tidak ada biaya tersembunyi, tidak ada tipu daya. Apa yang Anda lihat adalah yang Anda bayar. Kami percaya pengalaman luar biasa tidak harus disertai stres finansial.">No hidden fees, no bait-and-switch. What you see is what you pay. We believe incredible experiences shouldn't come with a side of financial stress.</p>
+          <div class="card-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="packages" id="packages">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-en="Curated Experiences" data-id="Pengalaman Pilihan">Curated Experiences</span>
+        <h2 class="section-title" data-en="Our <em>Signature</em> Tours" data-id="Paket <em>Unggulan</em> Kami">Our <em>Signature</em> Tours</h2>
+        <p class="section-desc" data-en="From crystal-clear waters to volcanic peaks — every tour is an unforgettable chapter in your Bali story." data-id="Dari air jernih hingga puncak berapi — setiap wisata adalah bab tak terlupakan dalam kisah Bali Anda.">From crystal-clear waters to volcanic peaks — every tour is an unforgettable chapter in your Bali story.</p>
+      </div>
+      <div class="packages-grid">
+
+        <div class="pkg-card" data-category="water">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1682687221248-3116ba6ab483?w=600&q=80" alt="Snorkeling Lovina" loading="lazy" />
+            <div class="pkg-overlay"></div>
+            <div class="pkg-badge" data-en="Most Popular" data-id="Terpopuler">Most Popular</div>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-category">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5zm-5 0c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5S11 2.67 11 3.5v5c0 .83-.67 1.5-1.5 1.5zM3 14c.83 0 1.5-.67 1.5-1.5S3.83 11 3 11s-1.5.67-1.5 1.5S2.17 14 3 14zm0 6c.83 0 1.5-.67 1.5-1.5S3.83 17 3 17s-1.5.67-1.5 1.5S2.17 20 3 20z"/></svg>
+              <span data-en="Water Adventure" data-id="Petualangan Air">Water Adventure</span>
+            </div>
+            <h3 data-en="Lovina Snorkeling" data-id="Snorkeling Lovina">Lovina Snorkeling</h3>
+            <p data-en="Glide above vibrant coral reefs teeming with tropical fish, sea turtles, and playful dolphins in the calm waters of Lovina." data-id="Meluncur di atas terumbu karang penuh warna dengan ikan tropis, penyu laut, dan lumba-lumba di perairan tenang Lovina.">Glide above vibrant coral reefs teeming with tropical fish, sea turtles, and playful dolphins in the calm waters of Lovina.</p>
+            <ul class="pkg-includes">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Equipment included" data-id="Perlengkapan termasuk">Equipment included</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Dolphin watching" data-id="Melihat lumba-lumba">Dolphin watching</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Hotel pickup & drop-off" data-id="Jemput & antar hotel">Hotel pickup & drop-off</span></li>
+            </ul>
+            <div class="pkg-footer">
+              <div class="pkg-price">
+                <span class="price-label" data-en="per person" data-id="per orang">per person</span>
+                <span class="price-amount">IDR 500K</span>
+              </div>
+              <a href="#booking" class="pkg-book-btn" data-package="Lovina Snorkeling">
+                <span data-en="Book This" data-id="Pesan">Book This</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="pkg-shine"></div>
+        </div>
+
+        <div class="pkg-card" data-category="water">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" alt="Scuba Diving Bali" loading="lazy" />
+            <div class="pkg-overlay"></div>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-category">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span data-en="Water Adventure" data-id="Petualangan Air">Water Adventure</span>
+            </div>
+            <h3 data-en="Scuba Diving" data-id="Scuba Diving">Scuba Diving</h3>
+            <p data-en="Descend into Bali's legendary underwater world. Encounter reef sharks, manta rays, and technicolor coral gardens that defy imagination." data-id="Menyelami dunia bawah laut legendaris Bali. Temui hiu karang, pari manta, dan taman karang warna-warni yang melampaui imajinasi.">Descend into Bali's legendary underwater world. Encounter reef sharks, manta rays, and technicolor coral gardens that defy imagination.</p>
+            <ul class="pkg-includes">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Full gear & tank" data-id="Perlengkapan lengkap & tabung">Full gear & tank</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="2 dives included" data-id="2 kali penyelaman">2 dives included</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Certified instructor" data-id="Instruktur bersertifikat">Certified instructor</span></li>
+            </ul>
+            <div class="pkg-footer">
+              <div class="pkg-price">
+                <span class="price-label" data-en="per person" data-id="per orang">per person</span>
+                <span class="price-amount">IDR 800K</span>
+              </div>
+              <a href="#booking" class="pkg-book-btn" data-package="Scuba Diving">
+                <span data-en="Book This" data-id="Pesan">Book This</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="pkg-shine"></div>
+        </div>
+
+        <div class="pkg-card" data-category="land">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1573790387438-4da905039392?w=600&q=80" alt="Batur Volcano Sunrise" loading="lazy" />
+            <div class="pkg-overlay"></div>
+            <div class="pkg-badge" data-en="Bestseller" data-id="Terlaris">Bestseller</div>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-category">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l4-8 4 4 3-6 4 10H3z"/></svg>
+              <span data-en="Land Tour" data-id="Wisata Darat">Land Tour</span>
+            </div>
+            <h3 data-en="Batur Volcano Sunrise" data-id="Sunrise Gunung Batur">Batur Volcano Sunrise</h3>
+            <p data-en="Wake at midnight to trek Bali's sacred volcano. Watch the sun ignite a sea of clouds from the summit at 1,717m. A spiritual and physical triumph." data-id="Bangun tengah malam untuk mendaki gunung berapi suci Bali. Saksikan matahari membakar lautan awan dari puncak 1.717m. Pencapaian spiritual dan fisik.">Wake at midnight to trek Bali's sacred volcano. Watch the sun ignite a sea of clouds from the summit at 1,717m. A spiritual and physical triumph.</p>
+            <ul class="pkg-includes">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Midnight departure" data-id="Keberangkatan tengah malam">Midnight departure</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Breakfast at summit" data-id="Sarapan di puncak">Breakfast at summit</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Expert trekking guide" data-id="Pemandu trekking ahli">Expert trekking guide</span></li>
+            </ul>
+            <div class="pkg-footer">
+              <div class="pkg-price">
+                <span class="price-label" data-en="per person" data-id="per orang">per person</span>
+                <span class="price-amount">IDR 900K</span>
+              </div>
+              <a href="#booking" class="pkg-book-btn" data-package="Batur Volcano Sunrise">
+                <span data-en="Book This" data-id="Pesan">Book This</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="pkg-shine"></div>
+        </div>
+
+        <div class="pkg-card premium-pkg" data-category="land">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Ijen Blue Fire" loading="lazy" />
+            <div class="pkg-overlay"></div>
+            <div class="pkg-badge premium-badge" data-en="✦ Premium" data-id="✦ Premium">✦ Premium</div>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-category">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+              <span data-en="Nature Wonder" data-id="Keajaiban Alam">Nature Wonder</span>
+            </div>
+            <h3 data-en="Ijen Blue Fire Tour" data-id="Wisata Api Biru Ijen">Ijen Blue Fire Tour</h3>
+            <p data-en="Witness one of Earth's rarest phenomena — electric blue lava flickering like ghostly flames in the dead of night. This otherworldly spectacle changes lives." data-id="Saksikan salah satu fenomena paling langka di Bumi — lava biru elektrik berkelip seperti nyala api hantu di tengah malam. Pemandangan lain dunia yang mengubah hidup.">Witness one of Earth's rarest phenomena — electric blue lava flickering like ghostly flames in the dead of night. This otherworldly spectacle changes lives.</p>
+            <ul class="pkg-includes">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Gas mask provided" data-id="Masker gas disediakan">Gas mask provided</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="2D/1N experience" data-id="Pengalaman 2H/1M">2D/1N experience</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="All meals included" data-id="Semua makan termasuk">All meals included</span></li>
+            </ul>
+            <div class="pkg-footer">
+              <div class="pkg-price">
+                <span class="price-label" data-en="per person" data-id="per orang">per person</span>
+                <span class="price-amount">IDR 1.2M</span>
+              </div>
+              <a href="#booking" class="pkg-book-btn gold-btn" data-package="Ijen Blue Fire Tour">
+                <span data-en="Book This" data-id="Pesan">Book This</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="pkg-shine"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="gallery">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-en="Visual Stories" data-id="Kisah Visual">Visual Stories</span>
+        <h2 class="section-title" data-en="Journey Through <em>Our Lens</em>" data-id="Perjalanan Melalui <em>Lensa Kami</em>">Journey Through <em>Our Lens</em></h2>
+      </div>
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all" data-en="All" data-id="Semua">All</button>
+        <button class="filter-btn" data-filter="diving" data-en="Diving & Snorkeling" data-id="Diving & Snorkeling">Diving & Snorkeling</button>
+        <button class="filter-btn" data-filter="land" data-en="Land Tours" data-id="Wisata Darat">Land Tours</button>
+        <button class="filter-btn" data-filter="nature" data-en="Nature" data-id="Alam">Nature</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-en="Real Voices" data-id="Suara Nyata">Real Voices</span>
+        <h2 class="section-title" data-en="What Our Travelers <em>Say</em>" data-id="Apa Kata Wisatawan <em>Kami</em>">What Our Travelers <em>Say</em></h2>
+      </div>
+      <div class="testi-track-wrap">
+        <div class="testi-track" id="testiTrack">
+
+          <div class="testi-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Joe was an absolutely amazing guide — knowledgeable, funny, and deeply passionate about Bali. The snorkeling was incredible. We saw turtles and reef sharks on the same dive!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">M</div>
+              <div>
+                <span class="testi-name">Marcus T.</span>
+                <span class="testi-origin">🇦🇺 Sydney, Australia</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"The Batur sunrise jeep tour was the most magical experience of my life. Watching the sun rise above the clouds from the volcano summit — I cried happy tears."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">S</div>
+              <div>
+                <span class="testi-name">Sarah K.</span>
+                <span class="testi-origin">🇺🇸 New York, USA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Reiga Sari made our honeymoon unforgettable. Private snorkeling with dolphins, a sunset dinner — everything was perfectly arranged. No other agency compares."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">L</div>
+              <div>
+                <span class="testi-name">Lena & Tom H.</span>
+                <span class="testi-origin">🇩🇪 Berlin, Germany</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"The Ijen Blue Fire tour was worth every rupiah and more. We witnessed something that felt extraterrestrial. Joe's energy and knowledge made it 10x better."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">R</div>
+              <div>
+                <span class="testi-name">Raj P.</span>
+                <span class="testi-origin">🇬🇧 London, UK</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Fair prices, zero hassle, maximum experience. We saw turtles and sharks on the diving tour. Our guide knew exactly where they'd be. Simply extraordinary."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #fa709a, #fee140);">Y</div>
+              <div>
+                <span class="testi-name">Yuki N.</span>
+                <span class="testi-origin">🇯🇵 Tokyo, Japan</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="testi-nav">
+          <button class="testi-prev" id="testiPrev" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          </button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-next" id="testiNext" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="booking">
+    <div class="section-container booking-inner">
+      <div class="booking-left">
+        <span class="section-eyebrow" data-en="Get Started" data-id="Mulai Sekarang">Get Started</span>
+        <h2 class="section-title" data-en="Reserve Your <em>Adventure</em>" data-id="Pesan <em>Petualangan</em> Anda">Reserve Your <em>Adventure</em></h2>
+        <p data-en="Fill in the form and we'll send your booking details directly to WhatsApp — fast, simple, and personal." data-id="Isi formulir dan kami akan mengirim detail pemesanan langsung ke WhatsApp Anda — cepat, mudah, dan personal.">Fill in the form and we'll send your booking details directly to WhatsApp — fast, simple, and personal.</p>
+        <div class="booking-features">
+          <div class="bf-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span data-en="Instant WhatsApp confirmation" data-id="Konfirmasi WhatsApp instan">Instant WhatsApp confirmation</span>
+          </div>
+          <div class="bf-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span data-en="No deposit required to reserve" data-id="Tanpa deposit untuk reservasi">No deposit required to reserve</span>
+          </div>
+          <div class="bf-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span data-en="Free cancellation 24h prior" data-id="Pembatalan gratis 24 jam sebelumnya">Free cancellation 24h prior</span>
+          </div>
+        </div>
+        <div class="contact-direct">
+          <span data-en="Or contact directly:" data-id="Atau hubungi langsung:">Or contact directly:</span>
+          <a href="https://wa.me/6281252815242" target="_blank" class="wa-direct">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.534 5.854L0 24l6.334-1.51A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.653-.52-5.162-1.423l-.369-.221-3.764.897.933-3.655-.242-.38A9.936 9.936 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            +62 812-5281-5242
+          </a>
+        </div>
+      </div>
+      <div class="booking-right">
+        <div class="form-card glass-card">
+          <form id="bookingForm" class="booking-form" novalidate>
+            <div class="form-group">
+              <input type="text" id="fullName" name="fullName" required placeholder=" " />
+              <label for="fullName" data-en="Full Name" data-id="Nama Lengkap">Full Name</label>
+              <div class="form-line"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="date" id="tourDate" name="tourDate" required placeholder=" " />
+                <label for="tourDate" data-en="Tour Date" data-id="Tanggal Wisata">Tour Date</label>
+                <div class="form-line"></div>
+              </div>
+              <div class="form-group">
+                <input type="number" id="persons" name="persons" min="1" max="20" required placeholder=" " />
+                <label for="persons" data-en="Number of Persons" data-id="Jumlah Orang">Number of Persons</label>
+                <div class="form-line"></div>
+              </div>
+            </div>
+            <div class="form-group select-group">
+              <select id="tourPackage" name="tourPackage" required>
+                <option value="" disabled selected></option>
+                <option value="Lovina Snorkeling" data-en="Lovina Snorkeling – IDR 500K" data-id="Snorkeling Lovina – IDR 500K">Lovina Snorkeling – IDR 500K</option>
+                <option value="Scuba Diving" data-en="Scuba Diving – IDR 800K" data-id="Scuba Diving – IDR 800K">Scuba Diving – IDR 800K</option>
+                <option value="Batur Volcano Sunrise" data-en="Batur Volcano Sunrise – IDR 900K" data-id="Sunrise Gunung Batur – IDR 900K">Batur Volcano Sunrise – IDR 900K</option>
+                <option value="Ijen Blue Fire Tour" data-en="Ijen Blue Fire Tour – IDR 1.2M" data-id="Wisata Api Biru Ijen – IDR 1.2M">Ijen Blue Fire Tour – IDR 1.2M</option>
+              </select>
+              <label for="tourPackage" data-en="Select Package" data-id="Pilih Paket">Select Package</label>
+              <div class="form-line"></div>
+              <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="form-group">
+              <textarea id="notes" name="notes" rows="3" placeholder=" "></textarea>
+              <label for="notes" data-en="Special Requests (optional)" data-id="Permintaan Khusus (opsional)">Special Requests (optional)</label>
+              <div class="form-line"></div>
+            </div>
+            <button type="submit" class="btn-primary glow-btn full-width">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.534 5.854L0 24l6.334-1.51A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.653-.52-5.162-1.423l-.369-.221-3.764.897.933-3.655-.242-.38A9.936 9.936 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              <span data-en="Book via WhatsApp" data-id="Pesan via WhatsApp">Book via WhatsApp</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          <span class="logo-main">Reiga Sari</span>
+          <span class="logo-sub">Travel Lovina</span>
+        </a>
+        <p data-en="Bali's most trusted local tour agency, serving travelers from around the world since 2016." data-id="Agen wisata lokal Bali yang paling dipercaya, melayani wisatawan dari seluruh dunia sejak 2016.">Bali's most trusted local tour agency, serving travelers from around the world since 2016.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/reigasaritravel" target="_blank" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/6281252815242" target="_blank" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.534 5.854L0 24l6.334-1.51A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.653-.52-5.162-1.423l-.369-.221-3.764.897.933-3.655-.242-.38A9.936 9.936 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Quick Links" data-id="Tautan Cepat">Quick Links</h4>
+        <ul>
+          <li><a href="#why-us" data-en="Why Choose Us" data-id="Mengapa Kami">Why Choose Us</a></li>
+          <li><a href="#packages" data-en="Tour Packages" data-id="Paket Wisata">Tour Packages</a></li>
+          <li><a href="#gallery" data-en="Gallery" data-id="Galeri">Gallery</a></li>
+          <li><a href="#testimonials" data-en="Testimonials" data-id="Testimoni">Testimonials</a></li>
+          <li><a href="#booking" data-en="Book a Tour" data-id="Pesan Wisata">Book a Tour</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4 data-en="Contact Us" data-id="Hubungi Kami">Contact Us</h4>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+          <span>Lovina Beach, Buleleng, Bali, Indonesia</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.534 5.854L0 24l6.334-1.51A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.653-.52-5.162-1.423l-.369-.221-3.764.897.933-3.655-.242-.38A9.936 9.936 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          <a href="https://wa.me/6281252815242" target="_blank">+62 812-5281-5242</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#D4AF37" stroke="none"/></svg>
+          <a href="https://instagram.com/reigasaritravel" target="_blank">@reigasaritravel</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Reiga Sari Travel Lovina. <span data-en="All rights reserved." data-id="Hak cipta dilindungi.">All rights reserved.</span></p>
+      <p data-en="Made with ♥ in Lovina, Bali" data-id="Dibuat dengan ♥ di Lovina, Bali">Made with ♥ in Lovina, Bali</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6281252815242?text=Hello!%20I'd%20like%20to%20inquire%20about%20your%20tours." target="_blank" class="wa-float" aria-label="Chat on WhatsApp" id="waFloat">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.534 5.854L0 24l6.334-1.51A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.653-.52-5.162-1.423l-.369-.221-3.764.897.933-3.655-.242-.38A9.936 9.936 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    <span class="wa-tooltip" data-en="Chat with us!" data-id="Chat dengan kami!">Chat with us!</span>
+  </a>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <button class="lb-next" id="lbNext" aria-label="Next">›</button>
+    <div class="lb-img-wrap">
+      <img src="" alt="" id="lbImg" />
+    </div>
+  </div>
+
+  <script>
+    /* ============================================================
+       REIGA SARI TRAVEL LOVINA — script.js
+       ============================================================ */
+
+    (function () {
+      'use strict';
+
+      /* ── 1. Language Toggle ─────────────────────────────────── */
+      let currentLang = 'en';
+
+      const langToggle = document.getElementById('langToggle');
+      const langEnSpan = langToggle.querySelector('.lang-en');
+      const langIdSpan = langToggle.querySelector('.lang-id');
+
+      function applyLanguage(lang) {
+        currentLang = lang;
+        const attr = `data-${lang}`;
+        const elements = document.querySelectorAll(`[${attr}]`);
+
+        elements.forEach(el => {
+          const text = el.getAttribute(attr);
+          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = text;
+          } else if (el.tagName === 'OPTION') {
+            el.textContent = text;
+          } else {
+            el.innerHTML = text;
+          }
+        });
+
+        // Update toggle UI
+        if (lang === 'en') {
+          langEnSpan.classList.add('active');
+          langIdSpan.classList.remove('active');
+        } else {
+          langIdSpan.classList.add('active');
+          langEnSpan.classList.remove('active');
+        }
+
+        // Update html lang attribute
+        document.documentElement.lang = lang === 'en' ? 'en' : 'id';
+      }
+
+      langToggle.addEventListener('click', () => {
+        applyLanguage(currentLang === 'en' ? 'id' : 'en');
+      });
+
+      /* ── 2. Navbar ──────────────────────────────────────────── */
+      const navbar = document.getElementById('navbar');
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+      });
+
+      // Close mobile menu on link click
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('open');
+        });
+      });
+
+      /* ── 3. Hero Parallax ───────────────────────────────────── */
+      const heroBg = document.getElementById('heroBg');
+
+      window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        if (heroBg && scrolled < window.innerHeight * 1.5) {
+          heroBg.style.transform = `translateY(${scrolled * 0.35}px)`;
+        }
+      }, { passive: true });
+
+      /* ── 4. Hero Particles ──────────────────────────────────── */
+      const heroParticles = document.getElementById('heroParticles');
+
+      function createParticles() {
+        if (!heroParticles) return;
+        const count = 40;
+        for (let i = 0; i < count; i++) {
+          const p = document.createElement('div');
+          p.className = 'particle';
+          p.style.cssText = `
+            left: ${Math.random() * 100}%;
+            bottom: ${Math.random() * 20}%;
+            width: ${Math.random() * 3 + 1}px;
+            height: ${Math.random() * 3 + 1}px;
+            animation-duration: ${Math.random() * 12 + 8}s;
+            animation-delay: ${Math.random() * 8}s;
+          `;
+          heroParticles.appendChild(p);
+        }
+      }
+      createParticles();
+
+      /* ── 5. Scroll Reveal ───────────────────────────────────── */
+      function initReveal() {
+        const revealEls = document.querySelectorAll(
+          '.why-card, .pkg-card, .testi-card, .gallery-item, .section-header, .bf-item, .form-card'
+        );
+
+        revealEls.forEach((el, i) => {
+          el.classList.add('reveal');
+          // Stagger by position in parent
+          const siblings = el.parentElement.children;
+          const idx = Array.from(siblings).indexOf(el);
+          if (idx < 3) el.classList.add(`reveal-delay-${idx + 1}`);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      }
+      initReveal();
+
+      /* ── 6. Gallery ─────────────────────────────────────────── */
+      const galleryData = [
+        { url: 'https://images.unsplash.com/photo-1682687221248-3116ba6ab483?w=400&q=80', cat: 'diving', label: 'Snorkeling Lovina' },
+        { url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=80', cat: 'diving', label: 'Scuba Diving' },
+        { url: 'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=400&q=80', cat: 'nature', label: 'Bali Sunset' },
+        { url: 'https://images.unsplash.com/photo-1573790387438-4da905039392?w=400&q=80', cat: 'land', label: 'Batur Volcano' },
+        { url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80', cat: 'land', label: 'Ijen Tour' },
+        { url: 'https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=400&q=80', cat: 'nature', label: 'Lovina Beach' },
+        { url: 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=400&q=80', cat: 'diving', label: 'Coral Reef' },
+        { url: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=400&q=80', cat: 'nature', label: 'Rice Terraces' },
+        { url: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=80', cat: 'nature', label: 'Bali Culture' },
+        { url: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=400&q=80', cat: 'diving', label: 'Sea Turtle' },
+        { url: 'https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?w=400&q=80', cat: 'land', label: 'Temple Tour' },
+        { url: 'https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=400&q=80', cat: 'nature', label: 'Waterfall' },
+        { url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80', cat: 'land', label: 'Mountain Trek' },
+        { url: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=400&q=80', cat: 'diving', label: 'Dolphins Lovina' },
+        { url: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=400&q=80', cat: 'land', label: 'Sunrise Jeep' },
+        { url: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&q=80', cat: 'nature', label: 'Forest Trail' },
+        { url: 'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=400&q=80', cat: 'nature', label: 'Tropical Beach' },
+        { url: 'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?w=400&q=80', cat: 'diving', label: 'Night Dive' },
+        { url: 'https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=400&q=80', cat: 'land', label: 'Volcano Lake' },
+        { url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80', cat: 'nature', label: 'Rice Paddies' },
+      ];
+
+      const galleryGrid = document.getElementById('galleryGrid');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+
+      let galleryImages = [];
+
+      function buildGallery() {
+        if (!galleryGrid) return;
+        galleryGrid.innerHTML = '';
+        galleryImages = [];
+
+        galleryData.forEach((item, idx) => {
+          const div = document.createElement('div');
+          div.className = 'gallery-item reveal';
+          div.dataset.cat = item.cat;
+          div.dataset.idx = idx;
+
+          div.innerHTML = `
+            <img src="${item.url}" alt="${item.label}" loading="lazy" />
+            <div class="gallery-item-overlay">
+              <span>${item.label}</span>
+            </div>
+          `;
+
+          div.addEventListener('click', () => openLightbox(idx));
+          galleryGrid.appendChild(div);
+          galleryImages.push(item);
+        });
+
+        // Re-run reveal for new elements
+        setTimeout(() => {
+          document.querySelectorAll('.gallery-item.reveal').forEach(el => {
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(e => {
+                if (e.isIntersecting) {
+                  e.target.classList.add('visible');
+                  observer.unobserve(e.target);
+                }
+              });
+            }, { threshold: 0.05 });
+            observer.observe(el);
+          });
+        }, 100);
+      }
+      buildGallery();
+
+      function filterGallery(filter) {
+        const items = galleryGrid.querySelectorAll('.gallery-item');
+        items.forEach(item => {
+          const cat = item.dataset.cat;
+          const show = filter === 'all' || cat === filter;
+          if (show) {
+            item.classList.remove('hidden');
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.93)';
+            requestAnimationFrame(() => {
+              item.style.transition = 'opacity 0.4s, transform 0.4s';
+              item.style.opacity = '1';
+              item.style.transform = 'scale(1)';
+            });
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          filterGallery(btn.dataset.filter);
+        });
+      });
+
+      /* ── 7. Lightbox ─────────────────────────────────────────── */
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lbImg');
+      const lbClose = document.getElementById('lbClose');
+      const lbPrev = document.getElementById('lbPrev');
+      const lbNext = document.getElementById('lbNext');
+      let currentLbIdx = 0;
+
+      function openLightbox(idx) {
+        currentLbIdx = idx;
+        lbImg.src = galleryImages[idx].url.replace('w=400', 'w=1200');
+        lbImg.alt = galleryImages[idx].label;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+        setTimeout(() => { lbImg.src = ''; }, 300);
+      }
+
+      function lbNavigate(dir) {
+        currentLbIdx = (currentLbIdx + dir + galleryImages.length) % galleryImages.length;
+        lbImg.style.opacity = '0';
+        setTimeout(() => {
+          lbImg.src = galleryImages[currentLbIdx].url.replace('w=400', 'w=1200');
+          lbImg.alt = galleryImages[currentLbIdx].label;
+          lbImg.style.opacity = '1';
+        }, 200);
+        lbImg.style.transition = 'opacity 0.2s';
+      }
+
+      lbClose.addEventListener('click', closeLightbox);
+      lbPrev.addEventListener('click', () => lbNavigate(-1));
+      lbNext.addEventListener('click', () => lbNavigate(1));
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') lbNavigate(-1);
+        if (e.key === 'ArrowRight') lbNavigate(1);
+      });
+
+      /* ── 8. Testimonial Slider ──────────────────────────────── */
+      const testiTrack = document.getElementById('testiTrack');
+      const testiDots = document.getElementById('testiDots');
+      const testiPrev = document.getElementById('testiPrev');
+      const testiNext = document.getElementById('testiNext');
+
+      let testiIdx = 0;
+      let testiAutoplay;
+      let itemsPerView = 3;
+
+      function getItemsPerView() {
+        if (window.innerWidth < 768) return 1;
+        if (window.innerWidth < 1024) return 2;
+        return 3;
+      }
+
+      function updateTesti() {
+        itemsPerView = getItemsPerView();
+        const cards = testiTrack.querySelectorAll('.testi-card');
+        const total = cards.length;
+        const maxIdx = Math.max(0, total - itemsPerView);
+        testiIdx = Math.min(testiIdx, maxIdx);
+
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 24;
+        testiTrack.style.transform = `translateX(-${testiIdx * (cardWidth + gap)}px)`;
+
+        // Update dots
+        testiDots.innerHTML = '';
+        const dotCount = maxIdx + 1;
+        for (let i = 0; i < dotCount; i++) {
+          const dot = document.createElement('button');
+          dot.className = 'testi-dot' + (i === testiIdx ? ' active' : '');
+          dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+          dot.addEventListener('click', () => {
+            testiIdx = i;
+            updateTesti();
+            resetAutoplay();
+          });
+          testiDots.appendChild(dot);
+        }
+      }
+
+      function testiNavigate(dir) {
+        const cards = testiTrack.querySelectorAll('.testi-card');
+        const maxIdx = Math.max(0, cards.length - getItemsPerView());
+        testiIdx = Math.max(0, Math.min(testiIdx + dir, maxIdx));
+        updateTesti();
+      }
+
+      testiPrev.addEventListener('click', () => { testiNavigate(-1); resetAutoplay(); });
+      testiNext.addEventListener('click', () => { testiNavigate(1); resetAutoplay(); });
+
+      function startAutoplay() {
+        testiAutoplay = setInterval(() => {
+          const cards = testiTrack.querySelectorAll('.testi-card');
+          const maxIdx = Math.max(0, cards.length - getItemsPerView());
+          if (testiIdx >= maxIdx) testiIdx = -1;
+          testiNavigate(1);
+        }, 5000);
+      }
+
+      function resetAutoplay() {
+        clearInterval(testiAutoplay);
+        startAutoplay();
+      }
+
+      // Touch/swipe for testimonials
+      let tStartX = 0;
+      testiTrack.addEventListener('touchstart', (e) => { tStartX = e.touches[0].clientX; }, { passive: true });
+      testiTrack.addEventListener('touchend', (e) => {
+        const diff = tStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) { testiNavigate(diff > 0 ? 1 : -1); resetAutoplay(); }
+      }, { passive: true });
+
+      setTimeout(() => { updateTesti(); startAutoplay(); }, 200);
+      window.addEventListener('resize', () => { updateTesti(); }, { passive: true });
+
+      /* ── 9. Package card → booking form autofill ────────────── */
+      const pkgBookBtns = document.querySelectorAll('.pkg-book-btn');
+      const tourPackageSelect = document.getElementById('tourPackage');
+
+      pkgBookBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const pkg = btn.dataset.package;
+          if (pkg && tourPackageSelect) {
+            tourPackageSelect.value = pkg;
+            tourPackageSelect.classList.add('has-value');
+          }
+        });
+      });
+
+      /* ── 10. Booking Form / WhatsApp ────────────────────────── */
+      const bookingForm = document.getElementById('bookingForm');
+
+      // Handle select floating label
+      if (tourPackageSelect) {
+        tourPackageSelect.addEventListener('change', () => {
+          if (tourPackageSelect.value) {
+            tourPackageSelect.classList.add('has-value');
+          } else {
+            tourPackageSelect.classList.remove('has-value');
+          }
+        });
+      }
+
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const name = document.getElementById('fullName').value.trim();
+          const date = document.getElementById('tourDate').value;
+          const persons = document.getElementById('persons').value;
+          const pkg = document.getElementById('tourPackage').value;
+          const notes = document.getElementById('notes').value.trim();
+
+          if (!name || !date || !persons || !pkg) {
+            showFormError('Please fill in all required fields.');
+            return;
+          }
+
+          const formattedDate = date
+            ? new Date(date).toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
+            : 'Not specified';
+
+          const message = [
+            '🌴 *TOUR BOOKING REQUEST*',
+            '━━━━━━━━━━━━━━━━━━━━',
+            `👤 *Name:* ${name}`,
+            `📅 *Date:* ${formattedDate}`,
+            `🎯 *Package:* ${pkg}`,
+            `👥 *Persons:* ${persons}`,
+            notes ? `📝 *Notes:* ${notes}` : '',
+            '━━━━━━━━━━━━━━━━━━━━',
+            'Hello Reiga Sari Travel! I\'d like to book the above tour. Please confirm availability. Thank you! 🙏',
+          ].filter(Boolean).join('\n');
+
+          const waUrl = `https://wa.me/6281252815242?text=${encodeURIComponent(message)}`;
+          window.open(waUrl, '_blank');
+        });
+      }
+
+      function showFormError(msg) {
+        const existing = document.querySelector('.form-error');
+        if (existing) existing.remove();
+        const err = document.createElement('p');
+        err.className = 'form-error';
+        err.textContent = msg;
+        err.style.cssText = 'color: #ef4444; font-size: 0.85rem; margin-top: -0.5rem;';
+        bookingForm.prepend(err);
+        setTimeout(() => err.remove(), 4000);
+      }
+
+      /* ── 11. Section headers centered ──────────────────────── */
+      document.querySelectorAll('.section-header').forEach(hdr => {
+        const section = hdr.closest('section');
+        if (section && (section.classList.contains('why-us') || section.classList.contains('packages') || section.classList.contains('gallery-section') || section.classList.contains('testimonials'))) {
+          hdr.classList.add('centered');
+        }
+      });
+
+      /* ── 12. Active nav highlight on scroll ─────────────────── */
+      const sections = document.querySelectorAll('section[id]');
+      const navItems = document.querySelectorAll('.nav-links a[href^="#"]');
+
+      const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navItems.forEach(link => {
+              link.style.color = link.getAttribute('href') === `#${id}` ? 'var(--gold)' : '';
+            });
+          }
+        });
+      }, { threshold: 0.4 });
+
+      sections.forEach(s => navObserver.observe(s));
+
+      /* ── 13. Smooth scroll offset for fixed navbar ───────────── */
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          const id = link.getAttribute('href').slice(1);
+          const target = document.getElementById(id);
+          if (!target) return;
+          e.preventDefault();
+          const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'));
+          const top = target.getBoundingClientRect().top + window.scrollY - navH - 16;
+          window.scrollTo({ top, behavior: 'smooth' });
+        });
+      });
+
+      /* ── 14. WhatsApp float entrance ────────────────────────── */
+      const waFloat = document.getElementById('waFloat');
+      if (waFloat) {
+        waFloat.style.transform = 'scale(0) translateY(20px)';
+        waFloat.style.opacity = '0';
+        waFloat.style.transition = 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        setTimeout(() => {
+          waFloat.style.transform = '';
+          waFloat.style.opacity = '1';
+        }, 2000);
+      }
+
+      /* ── 15. Subtle gold shimmer on section titles ───────────── */
+      const goldTitles = document.querySelectorAll('.section-title em, .title-line.italic');
+      goldTitles.forEach(el => {
+        el.style.backgroundImage = 'linear-gradient(90deg, #D4AF37, #F5D278, #D4AF37, #A8841A, #D4AF37)';
+        el.style.backgroundSize = '300% auto';
+        el.style.webkitBackgroundClip = 'text';
+        el.style.backgroundClip = 'text';
+        el.style.webkitTextFillColor = 'transparent';
+        el.style.animation = 'goldShimmer 6s linear infinite';
+      });
+
+      // Inject shimmer keyframes
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes goldShimmer {
+          0% { background-position: 0% center; }
+          100% { background-position: 300% center; }
+        }
+      `;
+      document.head.appendChild(style);
+
+      /* ── 16. Init ───────────────────────────────────────────── */
+      // Set today as min date for booking
+      const tourDateInput = document.getElementById('tourDate');
+      if (tourDateInput) {
+        tourDateInput.min = new Date().toISOString().split('T')[0];
+      }
+
+      console.log('✦ Reiga Sari Travel Lovina — Loaded Successfully');
+    })();
+  </script>
+</body>
+</html>
