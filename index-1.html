@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reiga Sari Travel Lovina – Bali's Premier Tour Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░ NAVBAR ░░ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-main">Reiga Sari</span>
+        <span class="logo-sub">Travel Lovina</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#why-us" data-en="Why Us" data-id="Mengapa Kami">Why Us</a></li>
+        <li><a href="#packages" data-en="Packages" data-id="Paket">Packages</a></li>
+        <li><a href="#gallery" data-en="Gallery" data-id="Galeri">Gallery</a></li>
+        <li><a href="#testimonials" data-en="Reviews" data-id="Ulasan">Reviews</a></li>
+        <li><a href="#booking" class="nav-book-btn" data-en="Book Now" data-id="Pesan Sekarang">Book Now</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-en active">EN</span>
+          <span class="lang-divider">|</span>
+          <span class="lang-id">ID</span>
+        </button>
+        <a href="https://instagram.com/reigasaritravel" target="_blank" class="ig-link" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ░░ HERO ░░ -->
+  <section class="hero" id="home">
+    <div class="hero-parallax" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-up delay-1">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span data-en="Lovina's #1 Rated Tour Agency" data-id="Agen Wisata Terbaik di Lovina">Lovina's #1 Rated Tour Agency</span>
+      </div>
+      <h1 class="hero-title animate-fade-up delay-2">
+        <span class="title-line" data-en="Discover Bali's" data-id="Jelajahi Keajaiban">Discover Bali's</span>
+        <span class="title-line italic" data-en="Hidden Wonders" data-id="Tersembunyi Bali">Hidden Wonders</span>
+      </h1>
+      <p class="hero-subtitle animate-fade-up delay-3" data-en="Exclusive tours crafted by local Balinese experts. Dive with dolphins, trek Batur Volcano, witness the magic of Ijen's blue fire — all with guides who know every secret path." data-id="Paket wisata eksklusif dirancang oleh ahli lokal Bali. Menyelam bersama lumba-lumba, mendaki Gunung Batur, menyaksikan keajaiban api biru Ijen — bersama pemandu yang mengenal setiap jalur rahasia.">
+        Exclusive tours crafted by local Balinese experts. Dive with dolphins, trek Batur Volcano, witness the magic of Ijen's blue fire — all with guides who know every secret path.
+      </p>
+      <div class="hero-cta animate-fade-up delay-4">
+        <a href="#packages" class="btn-primary glow-btn">
+          <span data-en="Explore Packages" data-id="Lihat Paket">Explore Packages</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#booking" class="btn-ghost">
+          <span data-en="Book Direct via WhatsApp" data-id="Pesan via WhatsApp">Book Direct via WhatsApp</span>
+        </a>
+      </div>
+      <div class="hero-stats animate-fade-up delay-5">
+        <div class="stat">
+          <span class="stat-num">500+</span>
+          <span class="stat-label" data-en="Happy Travelers" data-id="Wisatawan Puas">Happy Travelers</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">5.0★</span>
+          <span class="stat-label" data-en="Google Rating" data-id="Rating Google">Google Rating</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">8+</span>
+          <span class="stat-label" data-en="Years Experience" data-id="Tahun Pengalaman">Years Experience</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span data-en="Scroll" data-id="Gulir">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ░░ WHY CHOOSE US ░░ -->
+  <section class="why-us" id="why-us">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-en="Our Promise" data-id="Janji Kami">Our Promise</span>
+        <h2 class="section-title" data-en="Why Travelers Choose <em>Reiga Sari</em>" data-id="Mengapa Wisatawan Memilih <em>Reiga Sari</em>">Why Travelers Choose <em>Reiga Sari</em></h2>
+        <p class="section-desc" data-en="We're not just a tour agency. We're your local Balinese family — dedicated to creating memories that last a lifetime." data-id="Kami bukan sekadar agen wisata. Kami adalah keluarga Bali Anda — berdedikasi menciptakan kenangan yang abadi.">We're not just a tour agency. We're your local Balinese family — dedicated to creating memories that last a lifetime.</p>
+      </div>
+      <div class="why-grid">
+        <div class="glass-card why-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+          </div>
+          <h3 data-en="Born & Bred Local Experts" data-id="Ahli Lokal Sejati">Born & Bred Local Experts</h3>
+          <p data-en="Our guides were born in Lovina and know every hidden beach, sacred temple, and secret sunrise spot. No tourist traps — just authentic Bali." data-id="Pemandu kami lahir di Lovina dan mengenal setiap pantai tersembunyi, pura suci, dan tempat matahari terbit rahasia. Tanpa perangkap turis — hanya Bali yang autentik.">Our guides were born in Lovina and know every hidden beach, sacred temple, and secret sunrise spot. No tourist traps — just authentic Bali.</p>
+          <div class="card-glow"></div>
+        </div>
+        <div class="glass-card why-card featured-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          </div>
+          <div class="featured-badge" data-en="Most Praised" data-id="Paling Dipuji">Most Praised</div>
+          <h3 data-en="Perfect 5.0 Google Rating" data-id="Rating Google Sempurna 5.0">Perfect 5.0 Google Rating</h3>
+          <p data-en="Every single review is 5 stars. We don't just meet expectations — we shatter them. Our guests consistently describe their tours as the highlight of their entire Bali trip." data-id="Setiap ulasan bintang 5. Kami tidak hanya memenuhi ekspektasi — kami melampauinya. Tamu kami konsisten menyebut wisata kami sebagai puncak perjalanan Bali mereka.">Every single review is 5 stars. We don't just meet expectations — we shatter them. Our guests consistently describe their tours as the highlight of their entire Bali trip.</p>
+          <div class="stars-row">
+            <span>★★★★★</span>
+            <span>100+ Reviews</span>
+          </div>
+          <div class="card-glow"></div>
+        </div>
+        <div class="glass-card why-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 data-en="Transparent & Fair Pricing" data-id="Harga Transparan & Jujur">Transparent & Fair Pricing</h3>
+          <p data-en="No hidden fees, no bait-and-switch. What you see is what you pay. We believe incredible experiences shouldn't come with a side of financial stress." data-id="Tidak ada biaya tersembunyi, tidak ada tipu daya. Apa yang Anda lihat adalah yang Anda bayar. Kami percaya pengalaman luar biasa tidak harus disertai stres finansial.">No hidden fees, no bait-and-switch. What you see is what you pay. We believe incredible experiences shouldn't come with a side of financial stress.</p>
+          <div class="card-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ PACKAGES ░░ -->
+  <section class="packages" id="packages">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-en="Curated Experiences" data-id="Pengalaman Pilihan">Curated Experiences</span>
+        <h2 class="section-title" data-en="Our <em>Signature</em> Tours" data-id="Paket <em>Unggulan</em> Kami">Our <em>Signature</em> Tours</h2>
+        <p class="section-desc" data-en="From crystal-clear waters to volcanic peaks — every tour is an unforgettable chapter in your Bali story." data-id="Dari air jernih hingga puncak berapi — setiap wisata adalah bab tak terlupakan dalam kisah Bali Anda.">From crystal-clear waters to volcanic peaks — every tour is an unforgettable chapter in your Bali story.</p>
+      </div>
+      <div class="packages-grid">
+
+        <!-- Snorkeling -->
+        <div class="pkg-card" data-category="water">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1682687221248-3116ba6ab483?w=600&q=80" alt="Snorkeling Lovina" loading="lazy" />
+            <div class="pkg-overlay"></div>
+            <div class="pkg-badge" data-en="Most Popular" data-id="Terpopuler">Most Popular</div>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-category">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5zm-5 0c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5S11 2.67 11 3.5v5c0 .83-.67 1.5-1.5 1.5zM3 14c.83 0 1.5-.67 1.5-1.5S3.83 11 3 11s-1.5.67-1.5 1.5S2.17 14 3 14zm0 6c.83 0 1.5-.67 1.5-1.5S3.83 17 3 17s-1.5.67-1.5 1.5S2.17 20 3 20z"/></svg>
+              <span data-en="Water Adventure" data-id="Petualangan Air">Water Adventure</span>
+            </div>
+            <h3 data-en="Lovina Snorkeling" data-id="Snorkeling Lovina">Lovina Snorkeling</h3>
+            <p data-en="Glide above vibrant coral reefs teeming with tropical fish, sea turtles, and playful dolphins in the calm waters of Lovina." data-id="Meluncur di atas terumbu karang penuh warna dengan ikan tropis, penyu laut, dan lumba-lumba di perairan tenang Lovina.">Glide above vibrant coral reefs teeming with tropical fish, sea turtles, and playful dolphins in the calm waters of Lovina.</p>
+            <ul class="pkg-includes">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Equipment included" data-id="Perlengkapan termasuk">Equipment included</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Dolphin watching" data-id="Melihat lumba-lumba">Dolphin watching</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Hotel pickup & drop-off" data-id="Jemput & antar hotel">Hotel pickup & drop-off</span></li>
+            </ul>
+            <div class="pkg-footer">
+              <div class="pkg-price">
+                <span class="price-label" data-en="per person" data-id="per orang">per person</span>
+                <span class="price-amount">IDR 500K</span>
+              </div>
+              <a href="#booking" class="pkg-book-btn" data-package="Lovina Snorkeling">
+                <span data-en="Book This" data-id="Pesan">Book This</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="pkg-shine"></div>
+        </div>
+
+        <!-- Diving -->
+        <div class="pkg-card" data-category="water">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" alt="Scuba Diving Bali" loading="lazy" />
+            <div class="pkg-overlay"></div>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-category">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span data-en="Water Adventure" data-id="Petualangan Air">Water Adventure</span>
+            </div>
+            <h3 data-en="Scuba Diving" data-id="Scuba Diving">Scuba Diving</h3>
+            <p data-en="Descend into Bali's legendary underwater world. Encounter reef sharks, manta rays, and technicolor coral gardens that defy imagination." data-id="Menyelami dunia bawah laut legendaris Bali. Temui hiu karang, pari manta, dan taman karang warna-warni yang melampaui imajinasi.">Descend into Bali's legendary underwater world. Encounter reef sharks, manta rays, and technicolor coral gardens that defy imagination.</p>
+            <ul class="pkg-includes">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Full gear & tank" data-id="Perlengkapan lengkap & tabung">Full gear & tank</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="2 dives included" data-id="2 kali penyelaman">2 dives included</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Certified instructor" data-id="Instruktur bersertifikat">Certified instructor</span></li>
+            </ul>
+            <div class="pkg-footer">
+              <div class="pkg-price">
+                <span class="price-label" data-en="per person" data-id="per orang">per person</span>
+                <span class="price-amount">IDR 800K</span>
+              </div>
+              <a href="#booking" class="pkg-book-btn" data-package="Scuba Diving">
+                <span data-en="Book This" data-id="Pesan">Book This</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="pkg-shine"></div>
+        </div>
+
+        <!-- Batur Volcano -->
+        <div class="pkg-card" data-category="land">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1573790387438-4da905039392?w=600&q=80" alt="Batur Volcano Sunrise" loading="lazy" />
+            <div class="pkg-overlay"></div>
+            <div class="pkg-badge" data-en="Bestseller" data-id="Terlaris">Bestseller</div>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-category">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l4-8 4 4 3-6 4 10H3z"/></svg>
+              <span data-en="Land Tour" data-id="Wisata Darat">Land Tour</span>
+            </div>
+            <h3 data-en="Batur Volcano Sunrise" data-id="Sunrise Gunung Batur">Batur Volcano Sunrise</h3>
+            <p data-en="Wake at midnight to trek Bali's sacred volcano. Watch the sun ignite a sea of clouds from the summit at 1,717m. A spiritual and physical triumph." data-id="Bangun tengah malam untuk mendaki gunung berapi suci Bali. Saksikan matahari membakar lautan awan dari puncak 1.717m. Pencapaian spiritual dan fisik.">Wake at midnight to trek Bali's sacred volcano. Watch the sun ignite a sea of clouds from the summit at 1,717m. A spiritual and physical triumph.</p>
+            <ul class="pkg-includes">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Midnight departure" data-id="Keberangkatan tengah malam">Midnight departure</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Breakfast at summit" data-id="Sarapan di puncak">Breakfast at summit</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Expert trekking guide" data-id="Pemandu trekking ahli">Expert trekking guide</span></li>
+            </ul>
+            <div class="pkg-footer">
+              <div class="pkg-price">
+                <span class="price-label" data-en="per person" data-id="per orang">per person</span>
+                <span class="price-amount">IDR 900K</span>
+              </div>
+              <a href="#booking" class="pkg-book-btn" data-package="Batur Volcano Sunrise">
+                <span data-en="Book This" data-id="Pesan">Book This</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="pkg-shine"></div>
+        </div>
+
+        <!-- Ijen -->
+        <div class="pkg-card premium-pkg" data-category="land">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Ijen Blue Fire" loading="lazy" />
+            <div class="pkg-overlay"></div>
+            <div class="pkg-badge premium-badge" data-en="✦ Premium" data-id="✦ Premium">✦ Premium</div>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-category">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+              <span data-en="Nature Wonder" data-id="Keajaiban Alam">Nature Wonder</span>
+            </div>
+            <h3 data-en="Ijen Blue Fire Tour" data-id="Wisata Api Biru Ijen">Ijen Blue Fire Tour</h3>
+            <p data-en="Witness one of Earth's rarest phenomena — electric blue lava flickering like ghostly flames in the dead of night. This otherworldly spectacle changes lives." data-id="Saksikan salah satu fenomena paling langka di Bumi — lava biru elektrik berkelip seperti nyala api hantu di tengah malam. Pemandangan lain dunia yang mengubah hidup.">Witness one of Earth's rarest phenomena — electric blue lava flickering like ghostly flames in the dead of night. This otherworldly spectacle changes lives.</p>
+            <ul class="pkg-includes">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="Gas mask provided" data-id="Masker gas disediakan">Gas mask provided</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="2D/1N experience" data-id="Pengalaman 2H/1M">2D/1N experience</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-en="All meals included" data-id="Semua makan termasuk">All meals included</span></li>
+            </ul>
+            <div class="pkg-footer">
+              <div class="pkg-price">
+                <span class="price-label" data-en="per person" data-id="per orang">per person</span>
+                <span class="price-amount">IDR 1.2M</span>
+              </div>
+              <a href="#booking" class="pkg-book-btn gold-btn" data-package="Ijen Blue Fire Tour">
+                <span data-en="Book This" data-id="Pesan">Book This</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="pkg-shine"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ GALLERY ░░ -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-en="Visual Stories" data-id="Kisah Visual">Visual Stories</span>
+        <h2 class="section-title" data-en="Journey Through <em>Our Lens</em>" data-id="Perjalanan Melalui <em>Lensa Kami</em>">Journey Through <em>Our Lens</em></h2>
+      </div>
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all" data-en="All" data-id="Semua">All</button>
+        <button class="filter-btn" data-filter="diving" data-en="Diving & Snorkeling" data-id="Diving & Snorkeling">Diving & Snorkeling</button>
+        <button class="filter-btn" data-filter="land" data-en="Land Tours" data-id="Wisata Darat">Land Tours</button>
+        <button class="filter-btn" data-filter="nature" data-en="Nature" data-id="Alam">Nature</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Generated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ TESTIMONIALS ░░ -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-en="Real Voices" data-id="Suara Nyata">Real Voices</span>
+        <h2 class="section-title" data-en="What Our Travelers <em>Say</em>" data-id="Apa Kata Wisatawan <em>Kami</em>">What Our Travelers <em>Say</em></h2>
+      </div>
+      <div class="testi-track-wrap">
+        <div class="testi-track" id="testiTrack">
+
+          <div class="testi-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Joe was an absolutely amazing guide — knowledgeable, funny, and deeply passionate about Bali. The snorkeling was incredible. We saw turtles and reef sharks on the same dive!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">M</div>
+              <div>
+                <span class="testi-name">Marcus T.</span>
+                <span class="testi-origin">🇦🇺 Sydney, Australia</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"The Batur sunrise jeep tour was the most magical experience of my life. Watching the sun rise above the clouds from the volcano summit — I cried happy tears."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">S</div>
+              <div>
+                <span class="testi-name">Sarah K.</span>
+                <span class="testi-origin">🇺🇸 New York, USA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Reiga Sari made our honeymoon unforgettable. Private snorkeling with dolphins, a sunset dinner — everything was perfectly arranged. No other agency compares."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">L</div>
+              <div>
+                <span class="testi-name">Lena & Tom H.</span>
+                <span class="testi-origin">🇩🇪 Berlin, Germany</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"The Ijen Blue Fire tour was worth every rupiah and more. We witnessed something that felt extraterrestrial. Joe's energy and knowledge made it 10x better."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">R</div>
+              <div>
+                <span class="testi-name">Raj P.</span>
+                <span class="testi-origin">🇬🇧 London, UK</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Fair prices, zero hassle, maximum experience. We saw turtles and sharks on the diving tour. Our guide knew exactly where they'd be. Simply extraordinary."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #fa709a, #fee140);">Y</div>
+              <div>
+                <span class="testi-name">Yuki N.</span>
+                <span class="testi-origin">🇯🇵 Tokyo, Japan</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="testi-nav">
+          <button class="testi-prev" id="testiPrev" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          </button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-next" id="testiNext" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ BOOKING FORM ░░ -->
+  <section class="booking" id="booking">
+    <div class="section-container booking-inner">
+      <div class="booking-left">
+        <span class="section-eyebrow" data-en="Get Started" data-id="Mulai Sekarang">Get Started</span>
+        <h2 class="section-title" data-en="Reserve Your <em>Adventure</em>" data-id="Pesan <em>Petualangan</em> Anda">Reserve Your <em>Adventure</em></h2>
+        <p data-en="Fill in the form and we'll send your booking details directly to WhatsApp — fast, simple, and personal." data-id="Isi formulir dan kami akan mengirim detail pemesanan langsung ke WhatsApp Anda — cepat, mudah, dan personal.">Fill in the form and we'll send your booking details directly to WhatsApp — fast, simple, and personal.</p>
+        <div class="booking-features">
+          <div class="bf-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span data-en="Instant WhatsApp confirmation" data-id="Konfirmasi WhatsApp instan">Instant WhatsApp confirmation</span>
+          </div>
+          <div class="bf-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span data-en="No deposit required to reserve" data-id="Tanpa deposit untuk reservasi">No deposit required to reserve</span>
+          </div>
+          <div class="bf-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span data-en="Free cancellation 24h prior" data-id="Pembatalan gratis 24 jam sebelumnya">Free cancellation 24h prior</span>
+          </div>
+        </div>
+        <div class="contact-direct">
+          <span data-en="Or contact directly:" data-id="Atau hubungi langsung:">Or contact directly:</span>
+          <a href="https://wa.me/6281252815242" target="_blank" class="wa-direct">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.534 5.854L0 24l6.334-1.51A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.653-.52-5.162-1.423l-.369-.221-3.764.897.933-3.655-.242-.38A9.936 9.936 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            +62 812-5281-5242
+          </a>
+        </div>
+      </div>
+      <div class="booking-right">
+        <div class="form-card glass-card">
+          <form id="bookingForm" class="booking-form" novalidate>
+            <div class="form-group">
+              <input type="text" id="fullName" name="fullName" required placeholder=" " />
+              <label for="fullName" data-en="Full Name" data-id="Nama Lengkap">Full Name</label>
+              <div class="form-line"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="date" id="tourDate" name="tourDate" required placeholder=" " />
+                <label for="tourDate" data-en="Tour Date" data-id="Tanggal Wisata">Tour Date</label>
+                <div class="form-line"></div>
+              </div>
+              <div class="form-group">
+                <input type="number" id="persons" name="persons" min="1" max="20" required placeholder=" " />
+                <label for="persons" data-en="Number of Persons" data-id="Jumlah Orang">Number of Persons</label>
+                <div class="form-line"></div>
+              </div>
+            </div>
+            <div class="form-group select-group">
+              <select id="tourPackage" name="tourPackage" required>
+                <option value="" disabled selected></option>
+                <option value="Lovina Snorkeling" data-en="Lovina Snorkeling – IDR 500K" data-id="Snorkeling Lovina – IDR 500K">Lovina Snorkeling – IDR 500K</option>
+                <option value="Scuba Diving" data-en="Scuba Diving – IDR 800K" data-id="Scuba Diving – IDR 800K">Scuba Diving – IDR 800K</option>
+                <option value="Batur Volcano Sunrise" data-en="Batur Volcano Sunrise – IDR 900K" data-id="Sunrise Gunung Batur – IDR 900K">Batur Volcano Sunrise – IDR 900K</option>
+                <option value="Ijen Blue Fire Tour" data-en="Ijen Blue Fire Tour – IDR 1.2M" data-id="Wisata Api Biru Ijen – IDR 1.2M">Ijen Blue Fire Tour – IDR 1.2M</option>
+              </select>
+              <label for="tourPackage" data-en="Select Package" data-id="Pilih Paket">Select Package</label>
+              <div class="form-line"></div>
+              <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="form-group">
+              <textarea id="notes" name="notes" rows="3" placeholder=" "></textarea>
+              <label for="notes" data-en="Special Requests (optional)" data-id="Permintaan Khusus (opsional)">Special Requests (optional)</label>
+              <div class="form-line"></div>
+            </div>
+            <button type="submit" class="btn-primary glow-btn full-width">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.534 5.854L0 24l6.334-1.51A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.653-.52-5.162-1.423l-.369-.221-3.764.897.933-3.655-.242-.38A9.936 9.936 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              <span data-en="Book via WhatsApp" data-id="Pesan via WhatsApp">Book via WhatsApp</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          <span class="logo-main">Reiga Sari</span>
+          <span class="logo-sub">Travel Lovina</span>
+        </a>
+        <p data-en="Bali's most trusted local tour agency, serving travelers from around the world since 2016." data-id="Agen wisata lokal Bali yang paling dipercaya, melayani wisatawan dari seluruh dunia sejak 2016.">Bali's most trusted local tour agency, serving travelers from around the world since 2016.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/reigasaritravel" target="_blank" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/6281252815242" target="_blank" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.534 5.854L0 24l6.334-1.51A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.653-.52-5.162-1.423l-.369-.221-3.764.897.933-3.655-.242-.38A9.936 9.936 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Quick Links" data-id="Tautan Cepat">Quick Links</h4>
+        <ul>
+          <li><a href="#why-us" data-en="Why Choose Us" data-id="Mengapa Kami">Why Choose Us</a></li>
+          <li><a href="#packages" data-en="Tour Packages" data-id="Paket Wisata">Tour Packages</a></li>
+          <li><a href="#gallery" data-en="Gallery" data-id="Galeri">Gallery</a></li>
+          <li><a href="#testimonials" data-en="Testimonials" data-id="Testimoni">Testimonials</a></li>
+          <li><a href="#booking" data-en="Book a Tour" data-id="Pesan Wisata">Book a Tour</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4 data-en="Contact Us" data-id="Hubungi Kami">Contact Us</h4>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+          <span>Lovina Beach, Buleleng, Bali, Indonesia</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.534 5.854L0 24l6.334-1.51A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.653-.52-5.162-1.423l-.369-.221-3.764.897.933-3.655-.242-.38A9.936 9.936 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          <a href="https://wa.me/6281252815242" target="_blank">+62 812-5281-5242</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#D4AF37" stroke="none"/></svg>
+          <a href="https://instagram.com/reigasaritravel" target="_blank">@reigasaritravel</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Reiga Sari Travel Lovina. <span data-en="All rights reserved." data-id="Hak cipta dilindungi.">All rights reserved.</span></p>
+      <p data-en="Made with ♥ in Lovina, Bali" data-id="Dibuat dengan ♥ di Lovina, Bali">Made with ♥ in Lovina, Bali</p>
+    </div>
+  </footer>
+
+  <!-- ░░ FLOATING WHATSAPP ░░ -->
+  <a href="https://wa.me/6281252815242?text=Hello!%20I'd%20like%20to%20inquire%20about%20your%20tours." target="_blank" class="wa-float" aria-label="Chat on WhatsApp" id="waFloat">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.534 5.854L0 24l6.334-1.51A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.653-.52-5.162-1.423l-.369-.221-3.764.897.933-3.655-.242-.38A9.936 9.936 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    <span class="wa-tooltip" data-en="Chat with us!" data-id="Chat dengan kami!">Chat with us!</span>
+  </a>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <button class="lb-next" id="lbNext" aria-label="Next">›</button>
+    <div class="lb-img-wrap">
+      <img src="" alt="" id="lbImg" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
